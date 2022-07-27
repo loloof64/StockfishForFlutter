@@ -27,7 +27,7 @@ class Stockfish {
       if (message is String) {
         _stdoutController.sink.add(message);
       } else {
-        log('[stockfish] The stdout isolate sent $message');
+        debugPrint('[stockfish] The stdout isolate sent $message');
       }
     });
     compute(_spawnIsolates, [_mainPort.sendPort, _stdoutPort.sendPort]).then(
@@ -39,7 +39,7 @@ class Stockfish {
         }
       },
       onError: (error) {
-        log('[stockfish] The init isolate encountered an error $error');
+        debugPrint('[stockfish] The init isolate encountered an error $error');
         _cleanUp(1);
       },
     );
@@ -128,7 +128,7 @@ void _isolateMain(SendPort mainPort) {
   final exitCode = nativeMain();
   mainPort.send(exitCode);
 
-  log('[stockfish] nativeMain returns $exitCode');
+  debugPrint('[stockfish] nativeMain returns $exitCode');
 }
 
 void _isolateStdout(SendPort stdoutPort) {
@@ -138,7 +138,7 @@ void _isolateStdout(SendPort stdoutPort) {
     final pointer = nativeStdoutRead();
 
     if (pointer.address == 0) {
-      log('[stockfish] nativeStdoutRead returns NULL');
+      debugPrint('[stockfish] nativeStdoutRead returns NULL');
       return;
     }
 
@@ -154,21 +154,21 @@ void _isolateStdout(SendPort stdoutPort) {
 Future<bool> _spawnIsolates(List<SendPort> mainAndStdout) async {
   final initResult = nativeInit();
   if (initResult != 0) {
-    log('[stockfish] initResult=$initResult');
+    debugPrint('[stockfish] initResult=$initResult');
     return false;
   }
 
   try {
     await Isolate.spawn(_isolateStdout, mainAndStdout[1]);
   } catch (error) {
-    log('[stockfish] Failed to spawn stdout isolate: $error');
+    debugPrint('[stockfish] Failed to spawn stdout isolate: $error');
     return false;
   }
 
   try {
     await Isolate.spawn(_isolateMain, mainAndStdout[0]);
   } catch (error) {
-    log('[stockfish] Failed to spawn main isolate: $error');
+    debugPrint('[stockfish] Failed to spawn main isolate: $error');
     return false;
   }
 

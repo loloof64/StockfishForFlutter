@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:ffi/ffi.dart';
 
 final _nativeLib = Platform.isAndroid
-    ? DynamicLibrary.open('libstockfish.so')
+    ? DynamicLibrary.open('libstockfish_for_flutter.so')
     : DynamicLibrary.process();
 
 final int Function() nativeInit = _nativeLib
