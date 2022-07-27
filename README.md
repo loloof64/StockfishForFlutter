@@ -92,4 +92,4 @@ More on https://pub.dev/packages/ffigen for the prerequesites per OS.
 
 Just change the folder /src/stockfish with the sources of the new version, and also adjust the referenced NNUE file, as described above.
 
-If necessary, import the code inside main() function in main.cpp of stockfish source file, into the main() function in cpp/bridge/stockfish.cpp. **But anyway do not forget to delete the main.cpp from Stockfish sources folder afterwards.**
+If necessary, import the code inside main() function in main.cpp of stockfish source file, into the main() function in cpp/bridge/stockfish.cpp.
