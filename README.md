@@ -1,4 +1,4 @@
-# stockfish
+# Stockfish for flutter
 
 The Stockfish Chess Engine for Flutter.
 This project has been adapted from [Stockfish](https://github.com/ArjanAswal/Stockfish).
