@@ -9,6 +9,8 @@ Using source code from Stockfish 15
 
 You can find the UCI protocol [here](http://wbec-ridderkerk.nl/html/UCIProtocol.html).
 
+** Be carefull, if you run command "position fen $position" (where position is the value of the position FEN) : you should only send valid positions ! Otherwise your program will crash ! **
+
 iOS project must have `IPHONEOS_DEPLOYMENT_TARGET` >=11.0.
 
 ## Example
@@ -20,13 +22,13 @@ iOS project must have `IPHONEOS_DEPLOYMENT_TARGET` >=11.0.
 Update `dependencies` section inside `pubspec.yaml`:
 
 ```yaml
-  stockfish: ^1.0.0
+  stockfish_for_flutter: ^0.1.0
 ```
 
 ### Init engine
 
 ```dart
-import 'package:stockfish/stockfish.dart';
+import 'package:stockfish_for_flutter/stockfish.dart';
 
 # create a new instance
 final stockfish = Stockfish();
