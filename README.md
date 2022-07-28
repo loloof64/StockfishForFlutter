@@ -11,6 +11,11 @@ You can find the UCI protocol [here](http://wbec-ridderkerk.nl/html/UCIProtocol.
 
 **Be carefull, if you run command "position fen $position" (where position is the value of the position FEN) : you should only send valid positions ! Otherwise your program will crash !**
 
+**That also means that if you use Chess package, you must do 2 additionnal check:**
+
+**1. There must be only one king for each player.**
+**2. There is no any pawn on rank 1 and rank 8.**
+
 iOS project must have `IPHONEOS_DEPLOYMENT_TARGET` >=11.0.
 
 ## Example
