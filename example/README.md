@@ -2,15 +2,11 @@
 
 Demonstrates how to use the stockfish_for_flutter plugin.
 
-## Getting Started
+## Usage
 
-This project is a starting point for a Flutter application.
+Once the stockfish engine is ready  (there will be a green circle) :
+1. Enter the position FEN (Forsyth-Edwards Notation) in the text field, paste it or keep the default one, which correponds to the first position of a chess game,
+2. Choose the thinking time with the slider,
+3. Press the button compute move.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The outputs will be in the text area below.

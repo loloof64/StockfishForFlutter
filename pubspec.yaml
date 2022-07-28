@@ -1,6 +1,6 @@
 name: stockfish_for_flutter
-description: A new Flutter FFI plugin project.
-version: 0.0.1
+description: The Stockfish Chess Engine for Flutter.
+version: 0.1.0
 homepage:
 
 environment:
