@@ -17,7 +17,6 @@
 */
 
 import 'dart:async';
-import 'dart:developer';
 import 'dart:isolate';
 
 import 'package:ffi/ffi.dart';

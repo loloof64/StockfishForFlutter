@@ -1,6 +1,6 @@
 name: stockfish_for_flutter
-description: The Stockfish Chess Engine for Flutter.
-version: 0.1.0
+description: The Stockfish Chess Engine for Flutter. Stockfish is a chess engine written following the UCI protocol.
+version: 0.1.2
 homepage: https://github.com/loloof64/StockfishForFlutter
 
 environment:
@@ -8,13 +8,13 @@ environment:
   flutter: ">=2.11.0"
 
 dependencies:
-  ffi: ^1.2.1
+  ffi: ^2.0.1
   flutter:
     sdk: flutter
-  plugin_platform_interface: ^2.0.2
+  plugin_platform_interface: ^2.1.2
 
 dev_dependencies:
-  ffigen: ^4.1.2
+  ffigen: ^6.0.1
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0

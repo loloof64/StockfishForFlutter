@@ -7,7 +7,7 @@ Using source code from Stockfish 15
 
 ## Usages
 
-You can find the UCI protocol [here](http://wbec-ridderkerk.nl/html/UCIProtocol.html).
+You can find a description of the UCI protocol [here](https://www.shredderchess.com/chess-features/uci-universal-chess-interface.html).
 
 ### Position validity
 
