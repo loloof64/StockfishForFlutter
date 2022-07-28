@@ -9,7 +9,7 @@ Using source code from Stockfish 15
 
 You can find the UCI protocol [here](http://wbec-ridderkerk.nl/html/UCIProtocol.html).
 
-** Be carefull, if you run command "position fen $position" (where position is the value of the position FEN) : you should only send valid positions ! Otherwise your program will crash ! **
+**Be carefull, if you run command "position fen $position" (where position is the value of the position FEN) : you should only send valid positions ! Otherwise your program will crash !**
 
 iOS project must have `IPHONEOS_DEPLOYMENT_TARGET` >=11.0.
 
