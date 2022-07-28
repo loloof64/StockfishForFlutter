@@ -15,7 +15,9 @@ You can find the UCI protocol [here](http://wbec-ridderkerk.nl/html/UCIProtocol.
 
 **That also means that if you use Chess package, you must do 2 additionnal check:**
 
+
 **1. There must be only one king for each player.**
+
 **2. There is no any pawn on rank 1 and rank 8.**
 
 Otherwise you can use the latest version of chess, from [its repository](https://github.com/davecom/chess.dart), adding something like this in pubspec.yaml:
