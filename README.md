@@ -7,6 +7,8 @@ Using source code from Stockfish 15
 
 ## Usages
 
+You can find the UCI protocol [here](http://wbec-ridderkerk.nl/html/UCIProtocol.html).
+
 iOS project must have `IPHONEOS_DEPLOYMENT_TARGET` >=11.0.
 
 ## Example
